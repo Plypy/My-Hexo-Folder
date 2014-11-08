@@ -2,7 +2,7 @@ title: 'Dealing With Unique Index of Mongoose and Mongodb'
 date: 2014-06-03 20:51:11
 tags:
 - Mongoose
-- Mongodb
+- MongoDB
 - unique-index
 ---
 Mongoose provide a [unique](http://mongoosejs.com/docs/api.html#schematype_SchemaType-unique) attribute for schema types. By setting it as true, you can easily create uniqe index for an attribute.
