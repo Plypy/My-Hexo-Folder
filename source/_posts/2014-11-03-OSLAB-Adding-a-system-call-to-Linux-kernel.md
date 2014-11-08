@@ -17,7 +17,7 @@ categories:
 这次操作系统实验是给Linux内核添加一个系统调用，然后重编内核。我的环境如下：
 Windows下VirtualBox 4.6+Ubuntu12.04(64bit)+Linux3.16
 
-### 虚拟机&Ubuntu
+## 虚拟机&Ubuntu
 编译Linux内核当然首先需要一个Linux的发行版了，我用的是小白福音Ubuntu。实验指导是让在虚拟机下编译内核的，但听夏赢家说可以直接在实际的系统下搞这件事情，这样最后不过只是给系统添加了一个启动时的选项而已，不会影响原来的内核。
 
 于是我欢心雀跃的跑到我Ubuntu下面开始编译。。。为了追求速度，用了多线程编译。没曾想，电脑太渣，只听风扇飞转，过一会机器就黑了。。。大概是CPU过热保护断电了吧，呃，Linux的桌面版对于个人用户来说还是有些渣啊。思考再三后我决定还是在虚拟机下搞这件事情，因为看到SO上有不少人说搞内核这个东西可能会"Messing up your production machine"
@@ -48,7 +48,7 @@ Windows下VirtualBox 4.6+Ubuntu12.04(64bit)+Linux3.16
 
 然后注销再进入系统就可以搞定了
 
-### 向Linux内核添加Hello world syscall
+## 向Linux内核添加Hello world syscall
 
 呼出终端，建立一个文件夹用于此次实验
 
@@ -139,7 +139,7 @@ asmlinkage long sys_plypy_hello(void)
 
 至此我们就可以编译内核啦。
 
-### 内核编译
+## 内核编译
 
 接下来返回所有源文件的根目录，开始编译
 
@@ -166,7 +166,7 @@ asmlinkage long sys_plypy_hello(void)
     sudo make modules_install
     sudo make install
 
-### 测试
+## 测试
 
 到这里就把内核安装好了，接下来重启一下，在启动的时候应该能看到Grub的启动菜单，选择之前编译好的linux3.16plypyhello就好，使用如下代码
 
@@ -192,7 +192,7 @@ int main(void)
 
 就这样吧。
 
-### 错误处理
+## 错误处理
 
 **编译出错**，这个错误只可能发生在之前修改的几个文件当中。我数次把kernel写成了kernal。。。
 
@@ -207,7 +207,7 @@ int main(void)
     
     sudo update-grub
 
-### 总结
+## 总结
 
 真tm吃力。。。
 
