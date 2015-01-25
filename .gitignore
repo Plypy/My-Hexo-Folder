@@ -1,8 +1,15 @@
+# system related garbage
 .DS_Store
 Thumbs.db
+
+# project and editor related files
+*.sublime-*
+.projectile
+*~
+
+# hexo specific files
 db.json
 debug.log
 node_modules/
 public/
 .deploy/
-*.sublime-*
