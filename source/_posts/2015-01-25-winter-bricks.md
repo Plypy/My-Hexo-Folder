@@ -10,7 +10,7 @@ categories:
 - life
 ---
 
-A weeks ago, the 5th semester of my university life had ended. It was not bad,
+A week ago, the 5th semester of my university life had ended. It was not bad,
 I had new things learned, new concepts adopted, few old minds enhanced, few
 essential questions discovered, and maybe myself found.
 
