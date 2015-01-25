@@ -88,7 +88,7 @@ exclude_generator:
 # Markdown
 ## https://github.com/chjj/marked
 markdown:
-  gfm: true
+  gfm: false
   pedantic: false
   sanitize: false
   tables: true
@@ -105,4 +105,3 @@ stylus:
 deploy:
   type: github
   repo: git@github.com:Plypy/Plypy.github.io.git
-
