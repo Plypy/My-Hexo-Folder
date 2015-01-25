@@ -42,7 +42,9 @@ There few funny words in the answer accepted,
 > Because you are either a vi person or an emacs person. The same way you're either a dog person or a cat person.
 
 > And, anyway, emacs with its strange command sequence like
+
 > CTRL META LEFTSHIFT RIGHTSHIFT WINDOWS OPENAPPLE ALT K
+
 > is better suited to aliens with 87 fingers, or elite pianists :-)
 
 However, I found the `Evil` package, like those other vim add-ons on other
