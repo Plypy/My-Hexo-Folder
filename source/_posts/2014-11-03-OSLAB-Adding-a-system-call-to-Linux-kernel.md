@@ -14,8 +14,7 @@ categories:
 
 我渣交计算机大三的课程是相当的充实啊，海量的专业课与实验，再加上其他的一些事情，最近几天变身“真学狗”。。。
 
-这次操作系统实验是给Linux内核添加一个系统调用，然后重编内核。我的环境如下：
-Windows下VirtualBox 4.6+Ubuntu12.04(64bit)+Linux3.16
+这次操作系统实验是给Linux内核添加一个系统调用，然后重编内核。我的环境如下：Windows下VirtualBox 4.6+Ubuntu12.04(64bit)+Linux3.16
 
 ## 虚拟机&Ubuntu
 编译Linux内核当然首先需要一个Linux的发行版了，我用的是小白福音Ubuntu。实验指导是让在虚拟机下编译内核的，但听夏赢家说可以直接在实际的系统下搞这件事情，这样最后不过只是给系统添加了一个启动时的选项而已，不会影响原来的内核。
@@ -35,7 +34,7 @@ Windows下VirtualBox 4.6+Ubuntu12.04(64bit)+Linux3.16
 *下面这些部分都是关于配置VirtualBox的虚拟机与主系统进行文件拷贝的*
 + Shared Folders：虚拟机和主机间共享的文件夹，可以方便的用来传输文件。在Machine Folders里添加一个你想要向虚拟机里共享的文件夹吧，然后把auto mount，permanent勾上。
 
-接下来启动虚拟机，按照提示选择之前准备好的Ubuntu镜像，安装就是了。安装完毕后进入Ubuntu，还不能直接就开始干活。在上方菜单栏里找Devices-->Insert Guest Additions CD image。这个是VirtualBox的一个增强插件，不安装的话无法使用共享文件夹等功能。点击后，虚拟机会加载这个镜像，然后弹出窗口，选Run就是了。关于Guest Additions 具体参考官方文档 https://www.virtualbox.org/manual/ch04.html
+接下来启动虚拟机，按照提示选择之前准备好的Ubuntu镜像，安装就是了。安装完毕后进入Ubuntu，还不能直接就开始干活。在上方菜单栏里找Devices-->Insert Guest Additions CD image。这个是VirtualBox的一个增强插件，不安装的话无法使用共享文件夹等功能。点击后，虚拟机会加载这个镜像，然后弹出窗口，选Run就是了。关于Guest Additions具体参考官方文档 https://www.virtualbox.org/manual/ch04.html
 
 这是在 `/media`下面会加载我们之前共享的文档，Ctrl+Alt+T呼叫出终端，执行
     
@@ -198,8 +197,7 @@ int main(void)
 
 修复完错误后需要重新编译，但得先清除上一次编译遗留的东西，由于我们的配置非常少所以不妨直接全部清除 `make distclean`,然后再重复编译的过程就可以了。具体可以参考帮助文档`make help`
 
-**删除内核文件**
-有时会悲剧地编译通过后无法启动。。。把多余的内核放在有限的虚拟机空间里也不太好，可以去`/lib/modules/`,`/boot/`下删除掉之前生成的东西
+**删除内核文件**,有时会悲剧地编译通过后无法启动。。。把多余的内核放在有限的虚拟机空间里也不太好，可以去`/lib/modules/`,`/boot/`下删除掉之前生成的东西
 
     sudo rm -rf *plypyhello/ 
 
