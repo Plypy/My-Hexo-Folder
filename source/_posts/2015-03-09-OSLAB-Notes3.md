@@ -126,6 +126,7 @@ module_init(plypy_init);
 module_exit(plypy_exit);
 MODULE_LICENSE("GPL");
 ```
+通过insmod加载了后，可以通过`cat /proc/plypy`观察结果。
 
 ### SYSCALL
 这个可以参照之前的那篇[OSLAB Adding a system call to Linux kernel](/2014/11/03/OSLAB-Adding-a-system-call-to-Linux-kernel/)，只用把具体的函数逻辑改一改就行，如下：
