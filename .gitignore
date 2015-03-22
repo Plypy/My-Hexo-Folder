@@ -6,6 +6,7 @@ Thumbs.db
 *.sublime-*
 .projectile
 *~
+*\#
 
 # hexo specific files
 db.json
