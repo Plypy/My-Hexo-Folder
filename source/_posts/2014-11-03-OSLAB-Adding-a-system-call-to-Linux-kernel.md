@@ -152,6 +152,8 @@ asmlinkage long sys_plypy_hello(void)
 
 基本采取默认配置即可，可以在General-->Local version处修改一下，方便区分自己搞的内核。(**Update**注意Local Version中不要使用奇怪的字符，不要有空格，因为它将来是要作为目录名的一部分的。) Save后,开始编译链接，之前开启了多个处理器的选项，所以可以使用多线程编译，-j(n)选项是使用n线程编译，差不多几个核就几线程吧。
 
+**MORE UPDATE** 一些发行版（比如Ubuntu）会将当前使用的内核的配置文件放在`/boot/config-$(uname-r)`，可以考虑直接把那个拷贝过来用就好，即`cp /boot/config-$(uname-r) /YOURPATH/.config`
+
     make -j2
 
 编译是一个非常漫长的过程。。。至少对于我的渣电脑来说
