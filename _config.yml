@@ -103,5 +103,5 @@ stylus:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: github
+  type: git
   repo: git@github.com:Plypy/Plypy.github.io.git
