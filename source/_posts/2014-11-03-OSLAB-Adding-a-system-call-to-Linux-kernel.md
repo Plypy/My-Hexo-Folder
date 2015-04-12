@@ -158,9 +158,11 @@ asmlinkage long sys_plypy_hello(void)
 
 编译是一个非常漫长的过程。。。至少对于我的渣电脑来说
 
-然后编译各个模块
+~~然后编译各个模块~~
 
-    make modules -j2
+~~make modules -j2~~
+
+**Update**: 经过夏赢家提点，我看了一下Makefile，在`make`的时候已经编译过了内核所以编译模块这一步是不需要的。
 
 安装模块及内核
 
