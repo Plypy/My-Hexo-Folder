@@ -105,3 +105,8 @@ stylus:
 deploy:
   type: git
   repo: git@github.com:Plypy/Plypy.github.io.git
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 10
